@@ -395,7 +395,7 @@ class Effect extends glEffectBase {
         const v = Maf.map(5, 10, 0, 1, t);
         setLightText(
           this.renderer,
-          "Happy 2020!",
+          "I love life !",
           0xe6c1b6,
           Maf.parabola(v, 1)
         );
@@ -403,7 +403,7 @@ class Effect extends glEffectBase {
         const v = Maf.map(10, 15, 0, 1, t);
         setLightText(
           this.renderer,
-          "It's going to be an amazing year!",
+          "Teenage years are so fun !",
           0xe6c1b6,
           Maf.parabola(v, 1)
         );
@@ -411,7 +411,7 @@ class Effect extends glEffectBase {
         const v = Maf.map(15, 20, 0, 1, t);
         setLightText(
           this.renderer,
-          "Everything will be fine!",
+          "We’re gonna get through this !",
           0xe6c1b6,
           Maf.parabola(v, 1)
         );

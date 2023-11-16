@@ -37,8 +37,8 @@ banner.material.uniforms.text.value = textRender.renderTarget.texture;
 
 const textScene = new Scene();
 const textCamera = new OrthographicCamera(
-  -20 / 2,
-  20 / 2,
+  -30 / 2,
+  30 / 2,
   1.2 / 2,
   -1.2 / 2,
   0.1,

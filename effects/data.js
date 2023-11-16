@@ -1,43 +1,40 @@
-import Maf from "../third_party/Maf.js";
-import Easings from "../third_party/easings.js";
-import { settings } from "../js/settings.js";
+import Maf from '../third_party/Maf.js';
+import Easings from '../third_party/easings.js';
+import { settings } from '../js/settings.js';
 
 const fuckings = [
-  "Coronavirus",
-  "Bushfires",
-  "Trump",
-  "Scalpers",
-  "exceptionalism",
-  "24H news cycle",
-  "Influencers",
-  "totalitarism",
-  "The GOP",
-  "Trump",
-  "QRedditAnon",
-  "Nazis",
-  "Facebook",
-  "Fragile male egos",
-  "",
-  "",
-  "Jordan Peterson",
-  "Cyclones",
-  "the stock market",
-  "Behringer",
-  "Trump",
-  "Society",
-  "Selfishness",
-  "Bitcoin",
-  "harvey weinstein",
-  "Wildfires",
-  "Ebola",
-  "Joe Rogan",
-  "First wave",
-  "Second wave",
-  "Third Wave",
-  "Trump",
-  "",
-  "",
-  "",
+  'Le gouvernement',
+  'Les anti-vax',
+  'Le français',
+  'Les gens en général',
+  'tik-tok',
+  'La terre plate',
+  'la géographie',
+  'l’éducation physique',
+  'les influenceurs',
+  'les casinos',
+  'l’adulterie',
+  'le gaslighting',
+  'Taylor Swift',
+  'les guerres',
+  'Les sportifs',
+  'la police',
+  'LE SPORT PLEIN AIR',
+  'les américains',
+  'généraux d’armée',
+  'alpha bad boys',
+  'pick-me girls',
+  'transphobes',
+  'les xenophobes',
+  'les extrémistes',
+  'chrétiens extrémistes',
+  'les “gigachad”',
+  'wannabe soldiers',
+  'glace sous la neige',
+  'crevasses de neiges',
+  'la vie',
+  'la pollution',
+  'l’école',
   "",
   "",
   "",
@@ -51,28 +48,38 @@ const fuckings = [
   "",
   "",
   "",
-  "2020",
-  "Global warming",
-  "No healthcare",
-  "Speculation",
-  "Anti-maskers",
-  "Terrorism",
-  "Global warming",
-  "$$$ Depression",
-  "Police Brutality",
-  "Trump",
-  "Oil prices",
-  "Racism",
-  "Brexit",
-  "Anti-vaxxers",
-  "Social media",
-  "Wild capitalism",
-  "this wasted year",
-  "2020",
-  "2020",
-  "2020",
-  "2020",
-  "2020",
+  "",
+  "",
+  "",
+  'la mère de Ève',
+  'jus de pommes sans pommes',
+  'les karen',
+  'les power-leeches',
+  'les néonazi',
+  'vladimir putin',
+  '«just a prank, bro!»”',
+  '«dans ta semaine...»',
+  '«pas vraiment fâchée»',
+  'les micros-ondes',
+  'mansplaining',
+  'Elon musk',
+  'twitter',
+  'misgendering on purpose',
+  'les salades froides',
+  'LES ROUX',
+  'la dépression',
+  '«danse est pas un sport»',
+  'Les gun',
+  'Les oies ',
+  'les riches',
+  'la famine',
+  'Les guêpes',
+  'les stéréotypes ',
+  'les coins de table',
+  'Les presentations orales',
+  'le latin',
+  'Les moustiques',
+  'les moustaches poil de cul',
 ].map((v) => v.toUpperCase());
 
 function isEven(n) {
@@ -80,18 +87,18 @@ function isEven(n) {
 }
 
 function getFuck() {
-  return settings.NSFW ? "FUCK" : "F**K";
+  return settings.NSFW ? 'FUCK' : 'F**K';
 }
 
 function getFucking(t) {
   if (t >= 70.736 && t < 75.801) {
     const v = Maf.map(70.736, 75.801, 0, 1, t);
-    return { text: "F*MMXX", opacity: Maf.parabola(v, 1), color: 0xffffff };
+    return { text: 'F*IT', opacity: Maf.parabola(v, 1), color: 0xffffff };
   }
   if (t >= 75.801 && t < 80.856) {
     const v = Maf.map(75.801, 80.856, 0, 1, t);
     return {
-      text: "ART ACIDBEAT",
+      text: 'YEY LIFE',
       opacity: Maf.parabola(v, 1),
       color: 0xffffff,
     };
@@ -99,18 +106,18 @@ function getFucking(t) {
   if (t >= 80.856 && t < 85.835) {
     const v = Maf.map(80.856, 85.835, 0, 1, t);
     return {
-      text: "MUSIC GLOOM",
+      text: 'MARIE & GALS',
       opacity: Maf.parabola(v, 1),
       color: 0xffffff,
     };
   }
   if (t >= 85.835 && t < 90.362) {
     const v = Maf.map(85.835, 90.362, 0, 1, t);
-    return { text: "CODE SPITE", opacity: Maf.parabola(v, 1), color: 0xffffff };
+    return { text: 'WITH LOVE', opacity: Maf.parabola(v, 1), color: 0xffffff };
   }
   if (t > 111.09) {
     const v = Maf.clamp(t - 111.09, 0, 1);
-    return { text: `${getFuck()} 2020`, opacity: v, color: 0xffffff };
+    return { text: `${getFuck()} IT`, opacity: v, color: 0xffffff };
   }
 
   const et = t - 30.313;
@@ -118,13 +125,11 @@ function getFucking(t) {
   const beats = Math.floor(et / beatDuration) - 1;
 
   if (beats >= 27 && beats < 31) {
-    return { text: "", opacity: 0, color: 0xffffff };
+    return { text: '', opacity: 0, color: 0xffffff };
   }
 
   const text = isEven(beats) ? fuckings[beats / 2] : getFuck();
-  const opacity = Easings.InOutQuint(
-    Maf.parabola(Maf.mod(et, beatDuration) / beatDuration, 1)
-  );
+  const opacity = Easings.InOutQuint(Maf.parabola(Maf.mod(et, beatDuration) / beatDuration, 1));
   const alternate = isEven((beats - 1) / 2);
   return {
     text,
